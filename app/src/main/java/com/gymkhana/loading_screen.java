@@ -1,4 +1,4 @@
-package com.example.gymkhana;
+package com.gymkhana;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.gymkhana.R;
 
 public class loading_screen extends AppCompatActivity {
 
@@ -18,7 +20,7 @@ public class loading_screen extends AppCompatActivity {
         handler.postDelayed(
                 new Runnable() {
                     public void run() {
-                        Intent i = new Intent(loading_screen.this,MainActivity.class);
+                        Intent i = new Intent(loading_screen.this,loginactivity.class);
                         startActivity(i);
                         finish();
 

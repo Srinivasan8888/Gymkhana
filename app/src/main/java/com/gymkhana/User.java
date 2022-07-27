@@ -1,4 +1,4 @@
-package com.example.gymkhana;
+package com.gymkhana;
 
 public class User {
     public String firstname;

@@ -35,4 +35,12 @@
     <string name="mainactivity">mainactivity</string>
     <string name="Categories">Categories</string>
     <string name="Popular">Popular</string>
+    <string name="Home">Home</string>
+    <string name="TODO">TODO</string>
+    <string name="Profile">Profile</string>
+    <string name="Feedback">Feedback</string>
+    <string name="Settings">Settings</string>
+    <string name="Todo">TODO</string>
+    <string name="textview">TextView</string>
+    <string name="title">title</string>
 </resources>

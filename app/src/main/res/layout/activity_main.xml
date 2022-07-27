@@ -1,4 +1,5 @@
  <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintid"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -7,13 +8,14 @@
 
 
      <ScrollView
+         android:id="@+id/scrollView2"
          android:layout_width="match_parent"
          android:layout_height="match_parent">
 
          <LinearLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:orientation="vertical" >
+             android:orientation="vertical">
 
              <androidx.constraintlayout.widget.ConstraintLayout
                  android:layout_width="match_parent"
@@ -25,6 +27,7 @@
                      android:layout_height="101dp"
                      android:layout_marginTop="24dp"
                      android:src="@drawable/person"
+                     android:textColor="#f4511e"
                      app:layout_constraintEnd_toEndOf="parent"
                      app:layout_constraintHorizontal_bias="0.87"
                      app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +41,7 @@
                      android:layout_height="41dp"
                      android:fontFamily="@font/roboto_medium"
                      android:text="@string/hi_selena"
-                     android:textColor="#ff3d00"
+                     android:textColor="#A1887F"
                      android:textSize="24sp"
                      android:textStyle="bold"
                      app:layout_constraintBottom_toBottomOf="parent"
@@ -46,23 +49,8 @@
                      app:layout_constraintHorizontal_bias="0.051"
                      app:layout_constraintStart_toStartOf="parent"
                      app:layout_constraintTop_toTopOf="parent"
-                     app:layout_constraintVertical_bias="0.072" />
-
-                 <TextView
-                     android:id="@+id/lastnametv"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="4dp"
-                     android:text="@string/lastname"
-                     android:textColor="#ff3d00"
-                     android:textSize="24sp"
-                     android:textStyle="bold"
-                     app:layout_constraintBottom_toTopOf="@+id/Search_and_order"
-                     app:layout_constraintEnd_toEndOf="parent"
-                     app:layout_constraintHorizontal_bias="0.0"
-                     app:layout_constraintStart_toEndOf="@+id/firstnametv"
-                     app:layout_constraintTop_toTopOf="parent"
-                     app:layout_constraintVertical_bias="0.148" />
+                     app:layout_constraintVertical_bias="0.072"
+                     tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
                  <TextView
                      android:id="@+id/Search_and_order"
@@ -109,19 +97,6 @@
                      app:layout_constraintVertical_bias="0.0"
                      tools:ignore="TextContrastCheck,TextContrastCheck"
                      tools:visibility="visible" />
-
-                 <Button
-                     android:id="@+id/logout"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="20dp"
-                     android:text="@string/logout"
-                     app:layout_constraintBottom_toBottomOf="parent"
-                     app:layout_constraintEnd_toEndOf="parent"
-                     app:layout_constraintHorizontal_bias="0.46"
-                     app:layout_constraintStart_toStartOf="parent"
-                     app:layout_constraintTop_toBottomOf="@+id/editText"
-                     app:layout_constraintVertical_bias="0.0" />
 
              </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -187,5 +162,186 @@
 
              </androidx.constraintlayout.widget.ConstraintLayout>
          </LinearLayout>
+
      </ScrollView>
+
+     <androidx.coordinatorlayout.widget.CoordinatorLayout
+         android:layout_width="match_parent"
+         android:layout_height="100dp"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+
+         <com.google.android.material.bottomappbar.BottomAppBar
+             android:id="@+id/app_bar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="bottom"
+             android:backgroundTint="#f6f6f6"
+             app:fabCradleMargin="8dp"
+             app:fabAlignmentMode="end"
+             app:fabCradleRoundedCornerRadius="80dp"
+             app:fabCradleVerticalOffset="6dp">
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:baselineAligned="false">
+
+                 <LinearLayout
+                     android:id="@+id/homebtn"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="0.2"
+                     android:orientation="vertical">
+
+                     <ImageView
+                         android:id="@+id/imageviewhome"
+                         android:layout_width="match_parent"
+                         android:layout_height="0dp"
+                         android:layout_weight="1"
+                         android:contentDescription="@string/TODO"
+                         app:srcCompat="@drawable/home"
+                         tools:ignore="ImageContrastCheck" />
+
+                     <TextView
+                         android:id="@+id/textviewhome"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/Home"
+                         android:textAlignment="center"
+                         android:textColor="@color/black"
+                         android:textSize="12sp" />
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:id="@+id/profile"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="0.2"
+                     android:orientation="vertical">
+
+                     <ImageView
+                         android:id="@+id/imageViewperson"
+                         android:layout_width="match_parent"
+                         android:layout_height="0dp"
+                         android:layout_weight="1"
+                         android:contentDescription="@string/TODO"
+                         app:srcCompat="@drawable/profile"
+                         tools:ignore="ImageContrastCheck" />
+
+                     <TextView
+                         android:id="@+id/textviewperson"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/person"
+                         android:textAlignment="center"
+                         android:textColor="@color/black"
+                         android:textSize="12sp" />
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:id="@+id/feedback"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="0.2"
+                     android:orientation="vertical">
+
+                     <ImageView
+                         android:id="@+id/imageViewfeedback"
+                         android:layout_width="match_parent"
+                         android:layout_height="0dp"
+                         android:layout_weight="1"
+                         android:contentDescription="@string/TODO"
+                         app:srcCompat="@drawable/cat_5"
+                         tools:ignore="ImageContrastCheck" />
+
+                     <TextView
+                         android:id="@+id/textviewfeedback"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/Feedback"
+                         android:textAlignment="center"
+                         android:textColor="@color/black"
+                         android:textSize="12sp" />
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:id="@+id/settings"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="0.2"
+                     android:orientation="vertical">
+
+                     <ImageView
+                         android:id="@+id/imageViewsettings"
+                         android:layout_width="match_parent"
+                         android:layout_height="0dp"
+                         android:layout_weight="1"
+                         android:contentDescription="@string/TODO"
+                         app:srcCompat="@drawable/setting"
+                         tools:ignore="ImageContrastCheck" />
+
+                     <TextView
+                         android:id="@+id/textviewsettings"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/Settings"
+                         android:textAlignment="center"
+                         android:textColor="@color/black"
+                         android:textSize="12sp" />
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:id="@+id/invisiblebtn"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="0.2"
+                     android:orientation="vertical">
+
+                     <ImageView
+                         android:id="@+id/imageViewinvisiblebtn"
+                         android:layout_width="match_parent"
+                         android:layout_height="0dp"
+                         android:layout_weight="1"
+                         android:contentDescription="@string/TODO"
+                         android:visibility="invisible"
+                         app:srcCompat="@drawable/btnmenu"
+                         tools:ignore="ImageContrastCheck" />
+
+                     <TextView
+                         android:id="@+id/textviewinvisiblebtn"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/Home"
+                         android:textAlignment="center"
+                         android:textColor="@color/black"
+                         android:textSize="12sp"
+                         android:visibility="invisible" />
+                 </LinearLayout>
+
+             </LinearLayout>
+
+         </com.google.android.material.bottomappbar.BottomAppBar>
+
+         <com.google.android.material.floatingactionbutton.FloatingActionButton
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="end"
+             android:layout_marginBottom="24dp"
+             android:contentDescription="@string/todo"
+             android:elevation="3dp"
+             android:src="@drawable/shopping_cart"
+             app:backgroundTint="#ff5e00"
+             tools:ignore="ImageContrastCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck">
+
+
+         </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
  </androidx.constraintlayout.widget.ConstraintLayout>
+

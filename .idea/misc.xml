@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/cat_background.xml" value="0.1745" />
+        <entry key="app/src/main/res/layout/activity_loginactivity.xml" value="0.27105600684053016" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27105600684053016" />
+        <entry key="app/src/main/res/layout/loading_screen.xml" value="0.13467293715262932" />
+        <entry key="app/src/main/res/layout/viewholder_category.xml" value="0.44057769775390626" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
