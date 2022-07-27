@@ -1,0 +1,191 @@
+ <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+     <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical" >
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+                 <de.hdodenhof.circleimageview.CircleImageView
+                     android:id="@+id/imageView"
+                     android:layout_width="95dp"
+                     android:layout_height="101dp"
+                     android:layout_marginTop="24dp"
+                     android:src="@drawable/person"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintHorizontal_bias="0.87"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     tools:ignore="MissingConstraints" />
+
+
+                 <TextView
+                     android:id="@+id/firstnametv"
+                     android:layout_width="103dp"
+                     android:layout_height="41dp"
+                     android:fontFamily="@font/roboto_medium"
+                     android:text="@string/hi_selena"
+                     android:textColor="#ff3d00"
+                     android:textSize="24sp"
+                     android:textStyle="bold"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintHorizontal_bias="0.051"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintVertical_bias="0.072" />
+
+                 <TextView
+                     android:id="@+id/lastnametv"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="4dp"
+                     android:text="@string/lastname"
+                     android:textColor="#ff3d00"
+                     android:textSize="24sp"
+                     android:textStyle="bold"
+                     app:layout_constraintBottom_toTopOf="@+id/Search_and_order"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintHorizontal_bias="0.0"
+                     app:layout_constraintStart_toEndOf="@+id/firstnametv"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintVertical_bias="0.148" />
+
+                 <TextView
+                     android:id="@+id/Search_and_order"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="32dp"
+                     android:layout_marginTop="12dp"
+                     android:layout_marginEnd="194dp"
+                     android:fontFamily="@font/roboto_medium"
+                     android:text="@string/search_and_order"
+                     android:textColor="@color/black"
+                     android:textSize="24sp"
+                     android:textStyle="bold"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toStartOf="@+id/imageView"
+                     app:layout_constraintHorizontal_bias="0.117"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/firstnametv"
+                     app:layout_constraintVertical_bias="0.021" />
+
+                 <EditText
+                     android:id="@+id/editText"
+                     android:layout_width="397dp"
+                     android:layout_height="53dp"
+                     android:layout_marginTop="36dp"
+                     android:background="@drawable/search_background"
+                     android:drawableStart="@drawable/icon_search"
+                     android:hint="@string/SYFF"
+                     android:importantForAutofill="no"
+                     android:inputType="textPersonName"
+                     android:minHeight="2dp"
+                     android:paddingStart="20dp"
+                     android:paddingEnd="0dp"
+                     android:textColor="@color/black"
+                     android:textColorHint="#757575"
+                     android:textSize="14sp"
+                     android:textStyle="italic"
+                     android:visibility="visible"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="@+id/imageView"
+                     app:layout_constraintHorizontal_bias="0.209"
+                     app:layout_constraintStart_toStartOf="@+id/Search_and_order"
+                     app:layout_constraintTop_toBottomOf="@+id/Search_and_order"
+                     app:layout_constraintVertical_bias="0.0"
+                     tools:ignore="TextContrastCheck,TextContrastCheck"
+                     tools:visibility="visible" />
+
+                 <Button
+                     android:id="@+id/logout"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="20dp"
+                     android:text="@string/logout"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintHorizontal_bias="0.46"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/editText"
+                     app:layout_constraintVertical_bias="0.0" />
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+                 <androidx.recyclerview.widget.RecyclerView
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_marginTop="10dp"
+                     android:layout_marginBottom="2dp"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/popular" />
+
+                 <TextView
+                     android:id="@+id/popular"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="16dp"
+                     android:fontFamily="@font/roboto_medium"
+                     android:text="@string/Popular"
+                     android:textColor="@color/black"
+                     android:textSize="20sp"
+                     android:textStyle="bold"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintHorizontal_bias="0.045"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+                     app:layout_constraintVertical_bias="0.0" />
+
+                 <TextView
+                     android:id="@+id/Categories"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:fontFamily="@font/roboto_medium"
+                     android:text="@string/Categories"
+                     android:textColor="@color/black"
+                     android:textSize="20sp"
+                     android:textStyle="bold"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintHorizontal_bias="0.05"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintVertical_bias="0.0" />
+
+                 <androidx.recyclerview.widget.RecyclerView
+                     android:id="@+id/recyclerView"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_marginTop="8dp"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintHorizontal_bias="0.0"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/Categories"
+                     app:layout_constraintVertical_bias="0.0" />
+
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+         </LinearLayout>
+     </ScrollView>
+ </androidx.constraintlayout.widget.ConstraintLayout>
