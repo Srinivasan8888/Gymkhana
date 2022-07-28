@@ -20,7 +20,7 @@ public class loading_screen extends AppCompatActivity {
         handler.postDelayed(
                 new Runnable() {
                     public void run() {
-                        Intent i = new Intent(loading_screen.this,loginactivity.class);
+                        Intent i = new Intent(loading_screen.this,MainActivity.class);
                         startActivity(i);
                         finish();
 
