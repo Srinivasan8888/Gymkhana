@@ -10,12 +10,17 @@
      <ScrollView
          android:id="@+id/scrollView2"
          android:layout_width="match_parent"
-         android:layout_height="match_parent">
+         android:layout_height="match_parent"
+         app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent">
 
          <LinearLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:orientation="vertical">
+             android:orientation="vertical"
+             android:paddingBottom="120dp">
 
              <androidx.constraintlayout.widget.ConstraintLayout
                  android:layout_width="match_parent"
@@ -110,6 +115,7 @@
                      android:layout_height="match_parent"
                      android:layout_marginTop="10dp"
                      android:layout_marginBottom="2dp"
+                     android:paddingStart="22dp"
                      app:layout_constraintBottom_toBottomOf="parent"
                      app:layout_constraintEnd_toEndOf="parent"
                      app:layout_constraintStart_toStartOf="parent"
@@ -153,6 +159,7 @@
                      android:layout_width="match_parent"
                      android:layout_height="match_parent"
                      android:layout_marginTop="8dp"
+                     android:paddingStart="22dp"
                      app:layout_constraintBottom_toBottomOf="parent"
                      app:layout_constraintEnd_toEndOf="parent"
                      app:layout_constraintHorizontal_bias="0.0"
@@ -167,6 +174,7 @@
      </ScrollView>
 
      <androidx.coordinatorlayout.widget.CoordinatorLayout
+         android:id="@+id/coordinatorLayout"
          android:layout_width="match_parent"
          android:layout_height="100dp"
          app:layout_constraintBottom_toBottomOf="parent"
@@ -179,11 +187,11 @@
              android:id="@+id/app_bar"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
+             android:layout_gravity="bottom"
              android:backgroundTint="#f6f6f6"
              app:fabCradleMargin="8dp"
              app:fabCradleRoundedCornerRadius="50dp"
-             app:fabCradleVerticalOffset="6dp"
-             android:layout_gravity="bottom">
+             app:fabCradleVerticalOffset="6dp">
 
              <LinearLayout
                  android:layout_width="match_parent"
