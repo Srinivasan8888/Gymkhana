@@ -13,10 +13,12 @@
         <entry key="app/src/main/res/drawable/custom_button.xml" value="0.1745" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1745" />
         <entry key="app/src/main/res/drawable/search_background.xml" value="0.1745" />
+        <entry key="app/src/main/res/drawable/viewholder_popular.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_loginactivity.xml" value="0.27105600684053016" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27105600684053016" />
         <entry key="app/src/main/res/layout/loading_screen.xml" value="0.13467293715262932" />
         <entry key="app/src/main/res/layout/viewholder_category.xml" value="0.44057769775390626" />
+        <entry key="app/src/main/res/layout/viewholder_popular.xml" value="0.18084651560495937" />
       </map>
     </option>
   </component>

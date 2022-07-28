@@ -11,14 +11,16 @@ import com.example.gymkhana.R;
 import java.util.ArrayList;
 
 import Adaptor.CategoryAdaptor;
+import Adaptor.PopularAdapter;
 import Domain.CategoryDomain;
+import Domain.foodDomain;
 
 public class MainActivity extends AppCompatActivity {
 
 //    TextView firstnametv, lastnametv;
 
-    private RecyclerView.Adapter adapter;
-    public RecyclerView recyclerViewCategoryList;
+    private RecyclerView.Adapter adapter,adapter2;
+    public RecyclerView recyclerViewCategoryList,recyclerViewPopularList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,19 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new CategoryAdaptor(category);
         recyclerViewCategoryList.setAdapter(adapter);
+
+    }
+    private void recyclerViewPopular(){
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        recyclerViewCategoryList=findViewById(R.id.recyclerView2);
+
+        ArrayList<foodDomain> foodList=new ArrayList<>();
+        foodList.add(new foodDomain("Pepperoni pizza", "Pepperoni pizza", "pop_1",250));
+        foodList.add(new foodDomain("cheese Burger","bug1","pop_2",170));
+        foodList.add(new foodDomain("Veg pizza","piz2","pop_3",190));
+
+        adapter2=new PopularAdapter(foodList);
+        recyclerViewCategoryList.setAdapter(adapter2);
 
     }
 
